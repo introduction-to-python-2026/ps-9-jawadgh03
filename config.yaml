@@ -1,1 +1,8 @@
 
+
+path: "parkinsons_model.joblib"
+features:
+  - "MDVP:Fo(Hz)"
+  - "HNR"
+target: "status"
+
