@@ -1,5 +1,12 @@
-features:
-  - MDVP:Fo(Hz)
-  - MDVP:RAP
 
-path: "parkinsons_model.joblib"
+
+model_file: "parkinsons_model.joblib"
+
+selected_features:
+  - "MDVP:Fo(Hz)"
+  - "HNR"
+
+target: "status"
+
+test_size: 0.2
+random_state: 42
