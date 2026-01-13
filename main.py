@@ -1,13 +1,11 @@
-
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 df = pd.read_csv('parkinsons.csv')
-features = ['MDVP:Fo(Hz)', 'HNR']   # Inputs
-target = 'status'                    # Output
+features = ['MDVP:Fo(Hz)', 'HNR']   
+target = 'status'                    
 X = df[features]
 y = df[target]
 scaler = MinMaxScaler()
@@ -20,7 +18,3 @@ accuracy = model.score(X_test, y_test)
 print(f"Model Accuracy: {accuracy}")
 joblib.dump(model, 'parkinsons_model.joblib')
 print("Model saved as parkinsons_model.joblib")
-
-
-
-
